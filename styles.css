@@ -1,0 +1,28 @@
+body{
+  display: flex;
+  margin: 0;
+  background-color:hsl(0, 0%, 94%);
+  justify-content: center;
+  align-items: center;
+}
+.clockContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: grey;
+  width: 400px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.clockContainer p{
+  font-family: monospace;
+  margin-top: 0;
+  color: white;
+  font-size: 5em;
+  text-shadow: 2px 2px 5px hsl(0, 0%, 98%);
+
+}
