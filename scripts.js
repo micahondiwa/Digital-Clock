@@ -1,5 +1,64 @@
 function getTime(){
+
   const currentTime = new Date();
+
+  const dateToday = currentTime.getDate().toString().padStart(2, 0);
+  let thisMonth = currentTime.getMonth();
+  switch(thisMonth){
+    case 0:
+      thisMonth = "January";
+      break;
+
+    case 1:
+      thisMonth = "February";
+      break;
+
+    case 2:
+      thisMonth = "March";
+      break;
+
+    case 3:
+      thisMonth = "April";
+      break;
+
+    case 4:
+      thisMonth = "May";
+      break;
+    
+    case 5:
+      thisMonth = "June";
+      break;
+
+    case 6:
+      thisMonth = "July";
+      break;
+
+    case 7:
+      thisMonth = "August";
+      break;
+
+    case 8:
+      thisMonth = "September";
+      break;
+
+    case 9:
+      thisMonth = "October";
+      break;
+
+    case 10:
+      thisMonth = "November";
+      break;
+
+    case 11:
+      thisMonth = "December";
+      break;
+
+    default: "Not a month";
+  }
+  let thisYear = currentTime.getFullYear();
+
+  const dateDisplay = document.getElementById('date');
+  dateDisplay.textContent = `${dateToday} ${thisMonth}, ${thisYear}`;
   let hours = currentTime.getHours();
   let meridium;
   if(hours == 0 && minutes == 0){
@@ -18,9 +77,9 @@ function getTime(){
   hours = hours.toString().padStart(2, 0);
   let minutes = currentTime.getMinutes().toString().padStart(2, 0);
   let seconds = currentTime.getSeconds().toString().padStart(2, 0);
-  let clockText = document.getElementById('clockText');
+  let timeDisplay = document.getElementById('time');
 
-  clockText.textContent = `${hours}:${minutes}:${seconds}${meridium}`;
+  timeDisplay.textContent = `${hours}:${minutes}:${seconds}${meridium}`;
 }
 
 setInterval(getTime, 1000);
